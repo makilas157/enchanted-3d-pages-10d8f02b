@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { navLinks } from "@/data/site";
+import logoAsset from "@/assets/tevexxo-logo.jpeg.asset.json";
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
       <div className="container-x grid gap-10 py-14 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-2.5">
-            <span className="logo-mark" />
+            <img src={logoAsset.url} alt="Tevexxo logo" className="logo-image" />
             <span className="font-display text-lg font-semibold">tevexxo</span>
           </div>
           <p className="mt-3 text-sm text-muted-foreground">Build. Learn. Scale.</p>

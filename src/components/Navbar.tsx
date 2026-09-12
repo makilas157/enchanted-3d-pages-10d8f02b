@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { navLinks } from "@/data/site";
+import logoAsset from "@/assets/tevexxo-logo.jpeg.asset.json";
 import { CursorGrid } from "./CursorGrid";
 
 export function Navbar() {
@@ -12,7 +13,11 @@ export function Navbar() {
       <CursorGrid />
       <nav className="container-x relative flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="logo-mark logo-depth" />
+          <img
+            src={logoAsset.url}
+            alt="Tevexxo logo"
+            className="logo-image logo-depth"
+          />
           <span className="font-display text-lg font-semibold tracking-tight">tevexxo</span>
         </Link>
 
