@@ -18,7 +18,7 @@ export function NavConstellation() {
   return (
     <section className="section-y border-y border-border/60 bg-surface/40">
       <div className="container-x">
-        <Reveal>
+        <Reveal variant="section">
           <SectionHeading
             tag="Explore"
             title={

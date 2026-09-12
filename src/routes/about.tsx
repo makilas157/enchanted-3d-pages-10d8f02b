@@ -76,7 +76,7 @@ function AboutPage() {
 
       <section className="section-y">
         <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
-          <Reveal>
+          <Reveal variant="section">
             <SectionHeading
               tag="Our mission"
               title="Software that carries real weight."
@@ -100,7 +100,7 @@ function AboutPage() {
               </p>
             </div>
           </Reveal>
-          <Reveal delay={100}>
+          <Reveal variant="card" delay={300}>
             <img
               src={cardDesign}
               alt="Tevexxo studio design work"
@@ -115,12 +115,12 @@ function AboutPage() {
 
       <section className="section-y border-y border-border/60 bg-surface/40">
         <div className="container-x">
-          <Reveal>
+          <Reveal variant="section">
             <SectionHeading tag="Timeline" title="How we got here." />
           </Reveal>
           <ol className="mt-12 space-y-0 border-l border-border">
             {timeline.map((t, i) => (
-              <Reveal key={t.year} delay={i * 60}>
+              <Reveal key={t.year} variant="content" delay={300 + i * 100}>
                 <li className="relative pb-10 pl-8">
                   <span className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_12px_var(--accent)]" />
                   <span className="font-display text-sm font-semibold text-primary">{t.year}</span>
@@ -136,12 +136,12 @@ function AboutPage() {
 
       <section className="section-y">
         <div className="container-x">
-          <Reveal>
+          <Reveal variant="section">
             <SectionHeading tag="Values" title="Three things we don't trade away." />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {values.map((v, i) => (
-              <Reveal key={v.title} delay={i * 70}>
+              <Reveal key={v.title} variant="card" delay={300 + i * 100}>
                 <div className="depth-card h-full p-7">
                   <h3 className="font-display text-lg font-semibold">{v.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.body}</p>
@@ -149,7 +149,7 @@ function AboutPage() {
               </Reveal>
             ))}
           </div>
-          <Reveal>
+          <Reveal delay={220}>
             <div className="mt-12">
               <Link to="/contact" className="btn-solid">
                 Work with us <ArrowRight className="h-4 w-4" />

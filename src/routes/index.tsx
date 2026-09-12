@@ -47,10 +47,10 @@ function Home() {
         <CursorGrid />
         <ParticleField variant="hero" />
         <div className="container-x relative z-10 py-20 text-center">
-          <Reveal>
+          <Reveal variant="legacy">
             <SectionTag>Next-gen tech studio</SectionTag>
           </Reveal>
-          <Reveal delay={90}>
+          <Reveal variant="legacy" delay={90}>
             <div className="relative">
               <span
                 aria-hidden="true"
@@ -61,13 +61,13 @@ function Home() {
               </h1>
             </div>
           </Reveal>
-          <Reveal delay={180}>
+          <Reveal variant="legacy" delay={180}>
             <p className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Tevexxo is a software and product studio. We design, engineer and ship the systems
               that carry real operations — then keep them sharp long after launch.
             </p>
           </Reveal>
-          <Reveal delay={260}>
+          <Reveal variant="legacy" delay={260}>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <Link to="/contact" className="btn-solid">
                 Start a project <ArrowRight className="h-4 w-4" />
@@ -77,8 +77,8 @@ function Home() {
               </Link>
             </div>
           </Reveal>
-          <Reveal delay={340}>
-<dl className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4">
+          <Reveal variant="legacy" delay={340}>
+            <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4">
               {stats.map((s, i) => (
                 <div
                   key={s.label}
@@ -98,7 +98,7 @@ function Home() {
 
       <section className="section-y">
         <div className="container-x">
-          <Reveal>
+          <Reveal variant="section">
             <SectionHeading
               tag="What we do"
               title={
@@ -111,12 +111,12 @@ function Home() {
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {services.slice(0, 3).map((s, i) => (
-              <Reveal key={s.slug} delay={i * 80}>
+              <Reveal key={s.slug} variant="card" delay={300 + i * 100}>
                 <CatalogCard item={s} to="/services/$slug" index={i} />
               </Reveal>
             ))}
           </div>
-          <Reveal>
+          <Reveal delay={220}>
             <div className="mt-10">
               <Link to="/services" className="btn-outline">
                 View all <ArrowRight className="h-4 w-4" />
@@ -128,7 +128,7 @@ function Home() {
 
       <section className="section-y border-y border-border/60 bg-surface/40">
         <div className="container-x">
-          <Reveal>
+          <Reveal variant="section">
             <SectionHeading
               tag="Our products"
               title={
@@ -141,12 +141,12 @@ function Home() {
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {products.slice(0, 3).map((p, i) => (
-              <Reveal key={p.slug} delay={i * 80}>
+              <Reveal key={p.slug} variant="card" delay={300 + i * 100}>
                 <CatalogCard item={p} to="/products/$slug" index={i} />
               </Reveal>
             ))}
           </div>
-          <Reveal>
+          <Reveal delay={220}>
             <div className="mt-10">
               <Link to="/products" className="btn-outline">
                 View all <ArrowRight className="h-4 w-4" />

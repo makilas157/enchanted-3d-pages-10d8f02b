@@ -4,18 +4,29 @@ export function Reveal({
   children,
   delay = 0,
   className = "",
+  variant = "content",
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
+  variant?: "content" | "card" | "section" | "legacy";
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
-    setShown(false);
     const el = ref.current;
     if (!el) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setShown(true);
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      setShown(true);
+      return;
+    }
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -24,28 +35,20 @@ export function Reveal({
           io.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
+      { threshold: 0.18, rootMargin: "0px 0px -8% 0px" },
     );
     io.observe(el);
 
-    // Safety net: if the observer never fires (route-change timing, hydration,
-    // element already visible), force the content visible.
-    const fallback = setTimeout(() => {
-      setShown(true);
-      io.disconnect();
-    }, 500);
-
     return () => {
       io.disconnect();
-      clearTimeout(fallback);
     };
   }, []);
 
   return (
     <div
       ref={ref}
-      className={`reveal ${shown ? "reveal-in" : ""} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      className={`reveal reveal--${variant} ${shown ? "reveal-in" : ""} ${className}`}
+      style={{ "--reveal-delay": `${delay}ms` } as React.CSSProperties}
     >
       {children}
     </div>

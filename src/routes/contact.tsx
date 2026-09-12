@@ -52,7 +52,7 @@ function ContactPage() {
 
       <section className="section-y">
         <div className="container-x grid gap-12 lg:grid-cols-[1.4fr_1fr]">
-          <Reveal>
+          <Reveal variant="card" delay={300}>
             <form
               className="glass-panel space-y-5 p-8"
               onSubmit={(e) => {
@@ -110,10 +110,10 @@ function ContactPage() {
             </form>
           </Reveal>
 
-          <Reveal delay={90}>
-            <div className="space-y-4">
-              {details.map((d) => (
-                <div key={d.label} className="depth-card flex items-start gap-4 p-6">
+          <div className="space-y-4">
+            {details.map((d, i) => (
+              <Reveal key={d.label} variant="card" delay={300 + i * 100}>
+                <div className="depth-card flex items-start gap-4 p-6">
                   <d.icon className="mt-0.5 h-5 w-5 text-accent" />
                   <div>
                     <p className="text-xs tracking-wide text-muted-foreground uppercase">
@@ -122,15 +122,17 @@ function ContactPage() {
                     <p className="mt-1 text-sm font-medium">{d.value}</p>
                   </div>
                 </div>
-              ))}
+              </Reveal>
+            ))}
+            <Reveal variant="card" delay={600}>
               <div className="depth-card p-6">
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   Prefer a call? Mention a couple of time windows in your message and we&apos;ll
                   send an invite.
                 </p>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
