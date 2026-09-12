@@ -35,7 +35,7 @@ function ServiceDetail() {
       <PageHeader tag="Service" title={item.title} intro={item.description} />
       <section className="section-y">
         <div className="container-x grid gap-12 lg:grid-cols-2">
-          <Reveal>
+          <Reveal variant="card" delay={300}>
             <img
               src={item.image}
               alt={item.title}
@@ -45,7 +45,7 @@ function ServiceDetail() {
               className="article-image-3d w-full rounded-xl border border-border object-cover"
             />
           </Reveal>
-          <Reveal delay={90}>
+          <Reveal delay={120}>
             <p className="text-lg leading-relaxed text-muted-foreground">{item.detail}</p>
             <ul className="mt-8 space-y-3">
               {item.points.map((p) => (

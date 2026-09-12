@@ -43,7 +43,7 @@ function PostPage() {
       />
       <article className="section-y">
         <div className="container-x max-w-3xl">
-          <Reveal>
+          <Reveal variant="card" delay={300}>
             <img
               src={post.image}
               alt={post.title}
@@ -53,7 +53,7 @@ function PostPage() {
               className="article-image-3d w-full rounded-xl border border-border object-cover"
             />
           </Reveal>
-          <Reveal delay={80}>
+          <Reveal delay={120}>
             <div className="mt-10 space-y-5 text-base leading-relaxed text-muted-foreground">
               {post.body.map((p) => (
                 <p key={p.slice(0, 24)}>{p}</p>

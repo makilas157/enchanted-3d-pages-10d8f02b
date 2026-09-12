@@ -40,7 +40,7 @@ function ProductsPage() {
       <section className="section-y">
         <div className="container-x grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p, i) => (
-            <Reveal key={p.slug} delay={i * 70}>
+            <Reveal key={p.slug} variant="card" delay={300 + i * 100}>
               <CatalogCard item={p} to="/products/$slug" index={i} />
             </Reveal>
           ))}

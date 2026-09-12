@@ -31,7 +31,7 @@ export function SocialSection() {
         }}
       />
       <div className="container-x relative">
-        <Reveal>
+        <Reveal variant="section">
           <SectionHeading
             tag="Connect"
             title={
@@ -46,7 +46,7 @@ export function SocialSection() {
           {socials.map((s, i) => {
             const Icon = icons[i % icons.length]!;
             return (
-              <Reveal key={s.name} delay={i * 70}>
+              <Reveal key={s.name} variant="card" delay={300 + i * 100}>
                 <a
                   href={s.href}
                   target="_blank"

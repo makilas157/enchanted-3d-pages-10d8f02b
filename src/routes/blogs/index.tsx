@@ -48,7 +48,7 @@ function BlogsPage() {
       <section className="section-y">
         <div className="container-x grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((p, i) => (
-            <Reveal key={p.slug} delay={i * 70}>
+            <Reveal key={p.slug} variant="card" delay={300 + i * 100}>
               <Link to="/blogs/$slug" params={{ slug: p.slug }} className="catalog-card group">
                 <div className="aspect-[16/10] overflow-hidden">
                   <img

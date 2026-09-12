@@ -98,7 +98,7 @@ function WhyUsPage() {
       <section className="section-y">
         <div className="container-x grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((v, i) => (
-            <Reveal key={v.title} delay={i * 60}>
+            <Reveal key={v.title} variant="card" delay={300 + i * 100}>
               <div className="depth-card h-full p-7">
                 <v.icon className="h-6 w-6 text-accent" />
                 <h3 className="mt-5 font-display text-lg font-semibold">{v.title}</h3>
@@ -111,7 +111,7 @@ function WhyUsPage() {
 
       <section className="section-y border-y border-border/60 bg-surface/40">
         <div className="container-x">
-          <Reveal>
+          <Reveal variant="section">
             <SectionHeading
               tag="How we work"
               title="A rhythm you can plan around."
@@ -120,7 +120,7 @@ function WhyUsPage() {
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {process.map((p, i) => (
-              <Reveal key={p.step} delay={i * 70}>
+              <Reveal key={p.step} variant="card" delay={300 + i * 100}>
                 <div className="glass-panel h-full p-7">
                   <span className="font-display text-3xl font-semibold text-primary">{p.step}</span>
                   <h3 className="mt-4 font-display text-base font-semibold">{p.title}</h3>
@@ -129,7 +129,7 @@ function WhyUsPage() {
               </Reveal>
             ))}
           </div>
-          <Reveal>
+          <Reveal delay={220}>
             <dl className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-4">
               {stats.map((s) => (
                 <div key={s.label}>
@@ -146,10 +146,12 @@ function WhyUsPage() {
 
       <section className="section-y">
         <div className="container-x text-center">
-          <Reveal>
-            <h2 className="text-3xl font-semibold sm:text-4xl">
-              Let&apos;s talk about <span className="text-gradient">your build.</span>
-            </h2>
+          <Reveal variant="section">
+            <div className="reveal-heading-mask">
+              <h2 className="reveal-heading text-3xl font-semibold sm:text-4xl">
+                Let&apos;s talk about <span className="text-gradient">your build.</span>
+              </h2>
+            </div>
             <div className="mt-8 flex justify-center">
               <Link to="/contact" className="btn-solid">
                 Start a project <ArrowRight className="h-4 w-4" />
