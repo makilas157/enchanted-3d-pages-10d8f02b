@@ -152,7 +152,7 @@ function WhyUsPage() {
                 Let&apos;s talk about <span className="text-gradient">your build.</span>
               </h2>
             </div>
-            <div className="mt-8 flex justify-center">
+            <div className="reveal-action mt-8 flex justify-center">
               <Link to="/contact" className="btn-solid">
                 Start a project <ArrowRight className="h-4 w-4" />
               </Link>

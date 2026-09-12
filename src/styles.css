@@ -452,7 +452,8 @@
 }
 
 .reveal--section .section-tag,
-.reveal--section .reveal-copy {
+.reveal--section .reveal-copy,
+.reveal--section .reveal-action {
   opacity: 0;
   transform: translate3d(0, 28px, 0);
   transition:
@@ -469,6 +470,10 @@
   transition-delay: calc(var(--reveal-delay) + 120ms);
 }
 
+.reveal--section .reveal-action {
+  transition-delay: calc(var(--reveal-delay) + 220ms);
+}
+
 .reveal--content.reveal-in,
 .reveal--card.reveal-in,
 .reveal--legacy.reveal-in {
@@ -478,7 +483,8 @@
 
 .reveal--section.reveal-in .reveal-heading,
 .reveal--section.reveal-in .section-tag,
-.reveal--section.reveal-in .reveal-copy {
+.reveal--section.reveal-in .reveal-copy,
+.reveal--section.reveal-in .reveal-action {
   opacity: 1;
   transform: none;
 }
@@ -509,7 +515,8 @@
   }
 
   .reveal--section .section-tag,
-  .reveal--section .reveal-copy {
+  .reveal--section .reveal-copy,
+  .reveal--section .reveal-action {
     transform: translate3d(0, 20px, 0);
     transition-duration: 700ms;
   }
@@ -519,7 +526,8 @@
   .reveal,
   .reveal .reveal-heading,
   .reveal .section-tag,
-  .reveal .reveal-copy {
+  .reveal .reveal-copy,
+  .reveal .reveal-action {
     opacity: 1;
     transform: none;
     transition: none;
