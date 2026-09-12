@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2.5">
             <img src={logoAsset.url} alt="Tevexxo logo" className="logo-image" />
-            <span className="font-display text-lg font-semibold">tevexxo</span>
+            <span className="font-display text-lg font-semibold">Tevexxo</span>
           </div>
           <p className="mt-3 text-sm text-muted-foreground">Build. Learn. Scale.</p>
         </div>
