@@ -78,7 +78,7 @@ function Home() {
             </div>
           </Reveal>
           <Reveal variant="legacy" delay={340}>
-<dl className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4">
+            <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4">
               {stats.map((s, i) => (
                 <div
                   key={s.label}

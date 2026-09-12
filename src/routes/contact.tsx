@@ -111,8 +111,8 @@ function ContactPage() {
           </Reveal>
 
           <div className="space-y-4">
-              {details.map((d, i) => (
-                <Reveal key={d.label} variant="card" delay={300 + i * 100}>
+            {details.map((d, i) => (
+              <Reveal key={d.label} variant="card" delay={300 + i * 100}>
                 <div className="depth-card flex items-start gap-4 p-6">
                   <d.icon className="mt-0.5 h-5 w-5 text-accent" />
                   <div>
@@ -122,17 +122,17 @@ function ContactPage() {
                     <p className="mt-1 text-sm font-medium">{d.value}</p>
                   </div>
                 </div>
-                </Reveal>
-              ))}
-              <Reveal variant="card" delay={600}>
+              </Reveal>
+            ))}
+            <Reveal variant="card" delay={600}>
               <div className="depth-card p-6">
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   Prefer a call? Mention a couple of time windows in your message and we&apos;ll
                   send an invite.
                 </p>
               </div>
-              </Reveal>
-            </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
