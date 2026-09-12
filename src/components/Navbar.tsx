@@ -18,7 +18,7 @@ export function Navbar() {
             alt="Tevexxo logo"
             className="logo-image logo-depth"
           />
-          <span className="font-display text-lg font-semibold tracking-tight">tevexxo</span>
+          <span className="font-display text-lg font-semibold tracking-tight">Tevexxo</span>
         </Link>
 
         <div className="nav-3d absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 lg:flex">
