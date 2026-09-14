@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { navLinks } from "@/data/site";
-import logoAsset from "@/assets/tevexxo-logo.jpeg.asset.json";
+import logoAsset from "@/assets/tevexxo-logo.jpg.asset.json";
 import { CursorGrid } from "./CursorGrid";
 
 export function Navbar() {
