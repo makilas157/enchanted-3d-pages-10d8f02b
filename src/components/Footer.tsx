@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { navLinks } from "@/data/site";
-import logoAsset from "@/assets/tevexxo-logo.jpeg.asset.json";
+import logoAsset from "@/assets/tevexxo-logo.jpg.asset.json";
 
 export function Footer() {
   return (
